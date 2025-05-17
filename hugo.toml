@@ -1,0 +1,33 @@
+baseURL = "https://vandanparmar.github.io/" # Replace with your GitHub Pages URL
+languageCode = "en-gb"
+title = "VPV's Photography Gallery" # Replace with your name or site title
+theme = "hugo-theme-gallery"
+
+[params]
+  # Optional: Add a description for your site
+  description = "A portfolio of my photography work."
+
+# Add parameters specific to the hugo-theme-gallery
+[params.gallery]
+  # The theme is highly configurable. Refer to the theme's documentation for all options:
+  # https://github.com/nicokaiser/hugo-theme-gallery#configuration
+  # Below are some common options:
+
+  # Set the base URL for images (usually the same as baseURL)
+  baseURL = "https://vandanparmar.github.io/" # Ensure this matches your site URL
+
+  # Configure how albums are displayed on the homepage
+  albumsPerRow = 3 # Number of albums per row on the index page
+  maxAlbums = 0 # Maximum number of albums to display (0 for all)
+
+  # Configure how photos are displayed within an album
+  photosPerRow = 4 # Number of photos per row within an album
+  maxPhotos = 0 # Maximum number of photos per album (0 for all)
+
+  # Enable PhotoSwipe for lightbox effect
+  enablePhotoSwipe = true
+
+  # Set the title for the album index page (the homepage)
+  albumIndexTitle = "My Photo Albums"
+
+# You can add more configurations here based on the theme's documentation
