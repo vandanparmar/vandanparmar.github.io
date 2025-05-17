@@ -6,9 +6,17 @@ on:
       - gh-pages  # Set a branch to deploy
   pull_request:
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  deploy:
-    runs-on: ubuntu-22.0
+  build:
+    runs-on: ubuntu-latest
     env:
       HUGO_CACHEDIR: /tmp/hugo_cache # <- Define the env variable here, so that Hugo's cache dir is now predictible in your workflow and doesn't depend on the Hugo's version you're using.
 
