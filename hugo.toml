@@ -3,12 +3,24 @@ languageCode = "en-gb"
 title = "VPV's Photography Gallery" # Replace with your name or site title
 theme = "hugo-theme-gallery"
 
+[build]
+  publishResources = false
+
+
+[imaging]
+  enable = true
+  quality = 80  # Adjust quality as needed
+  [imaging.exif]
+    enabled = true
+    # Optionally, specify which EXIF tags to include/exclude
+    include = ["ImageDescription", "DateTimeOriginal", "Artist", "LensModel"]
+
 [params]
   # Optional: Add a description for your site
   description = "A portfolio of my photography work."
 
-# Add parameters specific to the hugo-theme-gallery
-[params.gallery]
+  # Add parameters specific to the hugo-theme-gallery
+  [params.gallery]
   # The theme is highly configurable. Refer to the theme's documentation for all options:
   # https://github.com/nicokaiser/hugo-theme-gallery#configuration
   # Below are some common options:
@@ -28,9 +40,12 @@ theme = "hugo-theme-gallery"
   enablePhotoSwipe = true
 
   # Set the title for the album index page (the homepage)
-  albumIndexTitle = "My Photo Albums"
+  albumIndexTitle = "Vandan P-V's Portfolio"
+
 
   [params.socialIcons]
     instagram = "https://www.instagram.com/vandan.p_v/"
+
+
 
 # You can add more configurations here based on the theme's documentation
