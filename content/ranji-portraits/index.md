@@ -1,8 +1,8 @@
 ---
-title: "Portraits"
+title: "Portraits of Ranji"
 weight: 10 # Controls the order of albums on the homepage (lower number appears first)
 resources:
-- src: "P6130507.jpg" # Specify a photo in this folder to be the album cover
+- src: "10-P7086009.jpg.jpg" # Specify a photo in this folder to be the album cover
   params:
     cover: true
 cascade:

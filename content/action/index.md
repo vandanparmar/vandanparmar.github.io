@@ -1,7 +1,7 @@
 ---
-title: "Animals"
+title: "Action Photos"
 resources:
-- src: "P4191670.jpg" # Specify a photo in this folder to be the album cover
+- src: "3-P8040510.jpg" # Specify a photo in this folder to be the album cover
   params:
     cover: true
 cascade:
