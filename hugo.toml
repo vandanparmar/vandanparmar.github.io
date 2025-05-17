@@ -1,6 +1,6 @@
 baseURL = "https://vandanpv.co.uk/" # Replace with your GitHub Pages URL
 languageCode = "en-gb"
-title = "VPV's Photography Gallery" # Replace with your name or site title
+title = "Vandan P-V's Portfolio" # Replace with your name or site title
 theme = "hugo-theme-gallery"
 
 [build]
