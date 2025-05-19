@@ -5,7 +5,7 @@ description: |
   
   If you like my work, follow me on Instagram!
 #lastmod: 2023-07-05
-title: Vandan P-V's Portfolio Gallery
+title: Vandan's Portfolio Gallery
 resources:
   - src: self-portraits/7-P7106386.jpg
     params:
