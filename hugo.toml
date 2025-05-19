@@ -27,7 +27,7 @@ theme = "hugo-theme-gallery"
   # Add parameters specific to the hugo-theme-gallery
   [params.gallery]
   # The theme is highly configurable. Refer to the theme's documentation for all options:
-  # https://github.com/nicokaiser/hugo-theme-gallery#configuration
+  # https://github.com//hugo-theme-gallery#configuration
   # Below are some common options:
 
   # Set the base URL for images (usually the same as baseURL)
