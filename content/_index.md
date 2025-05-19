@@ -1,11 +1,11 @@
 ---
 description: |
-  Welcome to my portfolio gallery.
-  I enjoy taking photos of all sorts, but love taking photos of people.
+  I'm Vandan, I find joy in capturing the world around me, with a special passion for photographing people and their stories.
+  Welcome to my photography portfolio.
   
   If you like my work, follow me on Instagram!
 #lastmod: 2023-07-05
-title: Vandan's Portfolio Gallery
+title: Moments Through My Lens
 resources:
   - src: self-portraits/7-P7106386.jpg
     params:
