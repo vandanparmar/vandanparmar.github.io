@@ -1,6 +1,6 @@
 ---
 description: |
-  Welcome to Vandan P-V's portfolio gallery.
+  Welcome to my portfolio gallery.
   I enjoy taking photos of all sorts, but love taking photos of people.
   
   If you like my work, follow me on Instagram!

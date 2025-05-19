@@ -1,8 +1,8 @@
 copyright = "© Vandan Parmar"
-defaultContentLanguage = "en"
+defaultContentLanguage = "en-gb"
 disableKinds = ["taxonomy"]
 enableRobotsTXT = true
-languageCode = "en"
+languageCode = "en-gb"
 timeZone = "Europe/London"
 timeout = "120s"
 
@@ -18,7 +18,7 @@ theme = "hugo-theme-gallery"
   [imaging.exif]
     disableDate = false
     disableLatLong = false
-    includeFields = "ImageDescription|Orientation|DateTimeOriginal|CaptureDate|FocalLength|Aperture|ShutterSpeed"
+    includeFields = "ImageDescription|Orientation|DateTimeOriginal|Exposure|Date|FocalLength|ApertureValue|ExposureTime|ISO|Date|Make|Model|Aperture|FNumber"
 
 [params]
   # Optional: Add a description for your site
