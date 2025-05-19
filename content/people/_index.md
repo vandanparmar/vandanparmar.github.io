@@ -1,5 +1,5 @@
 ---
-description: I always love taking photos of people, the fact that these photos will be unique, unable to be recreated and can be so personal to provide someone with last memories is a special kind of privilege.
+description: "I always love taking photos of people, having the opportunity to provide someone with personal, lasting memories, unique only to them."
 title: "People"
 keywords: [People]
 weight: -1
