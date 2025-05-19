@@ -5,9 +5,8 @@ resources:
 - src: "P1010139.jpg" # Specify a photo in this folder to be the album cover
   params:
     cover: true
-cascade:
-  build:
-    publishResources: false
+menus:
+  - main
 ---
 
 A selection of my favourite landscapes from around the world.

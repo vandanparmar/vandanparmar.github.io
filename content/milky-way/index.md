@@ -8,6 +8,8 @@ resources:
 cascade:
   build:
     publishResources: false
+menus:
+  - main
 ---
 
 A selection of my favourite landscapes from around the world.

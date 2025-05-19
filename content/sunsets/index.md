@@ -5,9 +5,8 @@ resources:
 - src: "P4253204.jpg" # Specify a photo in this folder to be the album cover
   params:
     cover: true
-cascade:
-  build:
-    publishResources: false
+menus:
+  - main
 ---
 
 Sunsets are the best
