@@ -7,7 +7,4 @@ resources:
 - src: "P4181149.jpg" # Specify a photo in this folder to be the album cover
   params:
     cover: true
-cascade:
-  build:
-    publishResources: false
 ---

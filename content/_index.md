@@ -16,6 +16,9 @@ menus:
     weight: -2
 # sub-galleries on list pages are sorted by date and weight (descending)
 cascade:
- build:
-   publishResources: false # do not include full images. Also disable download
+  build:
+    publishResources: false # do not include full images. Also disable download
+  params:
+    sort_by: Date
+    sort_order: desc
 ---

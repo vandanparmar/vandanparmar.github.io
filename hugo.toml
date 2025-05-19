@@ -47,7 +47,7 @@ theme = "hugo-theme-gallery"
   # Set the title for the album index page (the homepage)
   albumIndexTitle = "Welcome to Vandan's photography portfolio"
 
-
+  
   [params.socialIcons]
     instagram = "https://www.instagram.com/vandan.p_v/"
   
