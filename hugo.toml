@@ -1,5 +1,5 @@
 copyright = "© Vandan Parmar"
-defaultContentLanguage = "en-gb"
+defaultContentLanguage = "en"
 disableKinds = ["taxonomy"]
 enableRobotsTXT = true
 languageCode = "en-gb"
