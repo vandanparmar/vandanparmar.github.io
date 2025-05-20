@@ -55,3 +55,12 @@ theme = "hugo-theme-gallery"
     name = "Vandan Parmar-Venkat"
 
 # You can add more configurations here based on the theme's documentation
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-SPWLG1DYSP'
+
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = false
