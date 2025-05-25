@@ -1,5 +1,5 @@
 copyright = "© Vandan P-V Photography"
-defaultContentLanguage = "en"
+defaultContentLanguage = "en-gb"
 disableKinds = ["taxonomy"]
 enableRobotsTXT = true
 languageCode = "en-gb"
