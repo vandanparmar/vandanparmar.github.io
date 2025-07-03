@@ -1,0 +1,20 @@
+{{ $coreURL := strings.TrimSuffix .resource.Name .resource.RelPermalink }}
+{{ $lowerName := strings.ToLower .resource.Name}}
+{{ $link := print $coreURL  "#"  $lowerName}}
+
+
+<a href="{{ $link }}" class="photos-reel-item">
+    {{ $imgSrc := .resource.RelPermalink }}
+    {{ $imgAlt := .resource.Exif.Tags.ImageDescription | default .resource.Name }}
+    {{ $imgTitle := .resource.Exif.Tags.ImageDescription | default .resource.Name }}
+    {{ $displayDate := .date }} {{/* Directly use the date from the passed dictionary */}}
+
+    <img src="{{ $imgSrc | relURL }}" alt="{{ $imgAlt }}" loading="lazy">
+    <div class="photos-reel-caption">
+        {{ if $displayDate }}
+            {{/* Format the date for display, matching gallery.html style */}}
+            <p class="photo-date">{{ $displayDate | time.Format ":date_full" }}</p>
+        {{ end }}
+        <h3>{{ $imgTitle }}</h3>
+    </div>
+</a>

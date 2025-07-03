@@ -1,0 +1,122 @@
+<style>
+    /* Basic styling for the reel (keep existing styles) */
+    .reel-container {
+        margin: 4rem auto; /* Adjust margin as needed */
+        padding: 0 1rem; /* Add some padding on sides */
+        max-width: 1200px; /* Max width to keep it contained */
+    }
+    .reel-title {
+        text-align: center;
+        font-size: 2rem; /* Adjust font size */
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #f0f0f0; /* Adjust text color for dark theme */
+    }
+    .photos-reel {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Smooth snapping */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        gap: 1.5rem; /* Space between photos */
+        padding-bottom: 1rem; /* Space for scrollbar */
+    }
+    .photos-reel::-webkit-scrollbar {
+        height: 8px;
+    }
+    .photos-reel::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+    }
+    .photos-reel-item {
+        flex: 0 0 auto; /* Prevent items from shrinking */
+        width: 300px; /* Fixed width for each photo in the reel */
+        scroll-snap-align: start;
+        border-radius: 12px; /* Rounded corners */
+        overflow: hidden; /* Hide overflow for rounded corners */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+        background-color: #333; /* Background for the card */
+        display: flex;
+        flex-direction: column;
+    }
+    .photos-reel-item img {
+        width: 100%;
+        height: 200px; /* Fixed height for consistency */
+        object-fit: cover; /* Cover the area, cropping if necessary */
+        display: block;
+        border-radius: 12px 12px 0 0; /* Rounded top corners */
+    }
+    .photos-reel-caption {
+        padding: 1rem;
+        text-align: center;
+        color: #e0e0e0; /* Adjust text color */
+        font-size: 0.9rem;
+    }
+    .photos-reel-caption h3 {
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        color: #fff; /* Adjust title color */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .reel-title {
+            font-size: 2rem;
+        }
+        .photos-reel-item {
+            width: 250px;
+            height: auto;
+        }
+        .photos-reel-item img {
+            height: 180px;
+        }
+    }
+    @media (max-width: 480px) {
+        .reel-title {
+            font-size: 1.8rem;
+        }
+        .photos-reel-item {
+            width: 200px;
+        }
+        .photos-reel-item img {
+            height: 150px;
+        }
+    }
+</style>
+
+
+<section class="reel-container">
+    <h2 class="reel-title">New Photos</h2>
+    <div class="photos-reel">
+        {{ $allImageResources := slice }}
+        {{ range .Site.RegularPages }}
+            {{/* . is now an album page (e.g., content/portraits/_index.md) */}}
+            {{/* Iterate over all image resources within this album bundle */}}
+            {{ range .Resources.ByType "image" }}
+                {{/* Ensure the image resource has EXIF data and specifically a date, AND is not hidden */}}
+                {{ if .Exif }}
+                    {{ if .Exif.Date }}
+                        {{ if ne .Params.hidden true }}
+                            {{ $exifDateString := .Exif.Date | string }}
+                            {{ $parsedDate := (time.AsTime $exifDateString) }}
+                            {{ if $parsedDate }}
+                                {{/* Append a dictionary with the resource and its parsed date */}}
+                                {{ $allImageResources = $allImageResources | append (dict "resource" . "date" $parsedDate) }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{/* Now, sort the global list of dictionaries by their 'date' field (descending) */}}
+        {{ $sortedImages := sort $allImageResources ".date" "desc"}}
+
+        {{/* Range over the top 4 sorted images and pass the *entire dictionary* to the item card partial */}}
+        {{ range first 4 $sortedImages }}
+            {{ partial "reel-item-card.html" . }} {{/* Pass the whole dict: { "resource": ..., "date": ... } */}}
+        {{ else }}
+            <p>No recent photos to display yet.</p>
+        {{ end }}
+    </div>
+</section>
