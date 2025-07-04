@@ -13,7 +13,7 @@
     <div class="photos-reel-caption">
         {{ if $displayDate }}
             {{/* Format the date for display, matching gallery.html style */}}
-            <p class="photo-date">{{ $displayDate }}</p>
+            <p class="photo-date">{{ $displayDate | time.Format ":date_full" }}</p>
         {{ end }}
         <h3>{{ $imgTitle }}</h3>
     </div>

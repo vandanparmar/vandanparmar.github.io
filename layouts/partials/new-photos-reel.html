@@ -97,7 +97,7 @@
                 {{ if .Exif }}
                     {{ if .Exif.Date }}
                         {{ if ne .Params.hidden true }}
-                            {{ $exifDateString := .Exif.Date | string }}
+                            {{ $exifDateString := .Exif.Date }}
                             {{ $parsedDate := (time.AsTime $exifDateString) }}
                             {{ if $parsedDate }}
                                 {{/* Append a dictionary with the resource and its parsed date */}}
