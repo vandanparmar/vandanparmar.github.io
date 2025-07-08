@@ -1,16 +1,13 @@
 <style>
     /* Basic styling for the reel (keep existing styles) */
     .reel-container {
-        margin: 4rem auto; /* Adjust margin as needed */
-        padding: 0 1rem; /* Add some padding on sides */
-        max-width: 1200px; /* Max width to keep it contained */
+        max-width: 1280px; /* Max width to keep it contained */
     }
     .reel-title {
         text-align: center;
-        font-size: 2rem; /* Adjust font size */
+        font-size: 2.25rem; /* Adjust font size */
         font-weight: 700;
-        margin-bottom: 2rem;
-        color: #f0f0f0; /* Adjust text color for dark theme */
+        margin-bottom: 1.5rem;
     }
     .photos-reel {
         display: flex;
@@ -22,38 +19,40 @@
     }
     
     .photos-reel::-webkit-scrollbar-thumb {
-        background-color: #888;
+        /* background-color: #888; */
         border-radius: 4px;
     }
     .photos-reel-item {
         flex: 0 0 auto; /* Prevent items from shrinking */
-        width: 300px; /* Fixed width for each photo in the reel */
+        width: 290px; /* Fixed width for each photo in the reel */
         scroll-snap-align: start;
-        border-radius: 12px; /* Rounded corners */
+        border-radius: 1rem; /* Rounded corners */
         overflow: hidden; /* Hide overflow for rounded corners */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-        background-color: #333; /* Background for the card */
+        background-color: var(--surface-2); /*Background for the card*/
         display: flex;
         flex-direction: column;
     }
     .photos-reel-item img {
         width: 100%;
-        height: 200px; /* Fixed height for consistency */
+        height: 250px; /* Fixed height for consistency */
         object-fit: cover; /* Cover the area, cropping if necessary */
         display: block;
-        border-radius: 12px 12px 0 0; /* Rounded top corners */
+        border-radius: 1rem 1rem 0 0; /* Rounded top corners */
     }
     .photos-reel-caption {
         padding: 1rem;
         text-align: center;
-        color: #e0e0e0; /* Adjust text color */
-        font-size: 0.9rem;
+        font-size: .875rem;
+    }
+
+    .photo-date{
+        color: var(--text-2);
     }
     .photos-reel-caption h3 {
-        font-size: 1.2rem;
-        margin-top: 0;
+        font-size: 1.125rem;
+        margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        color: #fff; /* Adjust title color */
+        color: var(--text-1); /* Adjust title color */
     }
 
     /* Responsive adjustments */
@@ -62,7 +61,7 @@
             font-size: 2rem;
         }
         .photos-reel-item {
-            width: 250px;
+            width: 290px;
             height: auto;
         }
         .photos-reel-item img {
@@ -80,11 +79,13 @@
             height: 150px;
         }
     }
+
+
 </style>
 
 
 <section class="reel-container">
-    <h2 class="reel-title">New Photos</h2>
+    <h2 class="reel-title">Latest Moments</h2>
     <div class="photos-reel">
         {{ $allImageResources := slice }}
         {{ range .Site.RegularPages }}
