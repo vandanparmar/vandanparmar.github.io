@@ -21,7 +21,7 @@ theme = "hugo-theme-gallery"
     includeFields = "ImageDescription|Orientation|DateTimeOriginal|Exposure|Date|FocalLength|ApertureValue|ExposureTime|ISO|Date|Make|Model|Aperture|FNumber"
 
 [params]
-  title = "Vandan P-V's Portfolio" # Replace with your name or site title
+  title = "Vandan P-V's Photography Portfolio" # Replace with your name or site title
   
 
   # Optional: Add a description for your site

@@ -1,7 +1,7 @@
 ---
 description: |
   I'm Vandan, I find joy in capturing the world around me, with a special passion for photographing people and their stories.
-  Welcome to my photography portfolio.
+  Welcome to my photo portfolio.
   
   If you like my work, follow me on Instagram!
 #lastmod: 2023-07-05
