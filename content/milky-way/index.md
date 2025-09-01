@@ -1,5 +1,5 @@
 ---
-title: "Astrophotography & Milky Way"
+title: "Night Time & Milky Way"
 description: "The wonderous expanse."
 weight: 1 # Controls the order of albums on the homepage (lower number appears first)
 resources:
